@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
-
+    const num = 5;
+    let somaNum = 0;
     //PROCESSAMENTO
-
-
-    //SAÍDA
+    for (let contador = 1; contador <= num; contador++) {
+        const nota = Number(prompt(`Informe o numero ${contador}:`));
+        somaNum += nota;
+    }
+    const media = somaNum / num;
+    //SAIDA
+    document.write(`A média é ${media.toFixed(1)}`);
 
 </script>

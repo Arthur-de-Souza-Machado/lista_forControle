@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
-    
+    let populacaoInicial = 80000;
+    let populacaoAlvo = 200000;
     //PROCESSAMENTO
+    const taxaCrescimentoAnual = 0.03;
 
-    
+    let anos = 0;
+    let populacaoAtual = populacaoInicial;
+
+    for (let ano = 1; populacaoAtual < populacaoAlvo; ano++) {
+        populacaoAtual += populacaoAtual * taxaCrescimentoAnual;
+        anos = ano;
+    }
+
+    alert(`Serão necessários ${anos} anos para que a população atinja ${populacaoAlvo} habitantes.`);
+
+
     //SAÍDA
 
 </script>

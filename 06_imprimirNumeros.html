@@ -12,21 +12,20 @@
     const numeroInicial = parseInt(prompt("Informe o número inicial:"));
     const numeroFinal = parseInt(prompt("Informe o número final:"));
 
+    let impares = [];
+    let pares = [];
     if (numeroInicial < numeroFinal) {
-        alert(`Números ímpares entre os números informados:`);
         for (let numero = numeroInicial; numero <= numeroFinal; numero++) {
-            if (numero % 2 !== 0) {
-                console.log(numero);
+            if (numero % 2 == 0) {
+                pares.push(numero);
+            }
+            else {
+                impares.push(numero);
             }
         }
-
-        alert(`Números pares entre os números informados:`);
-        for (let numero = numeroInicial; numero <= numeroFinal; numero++) {
-            if (numero % 2 === 0) {
-                console.log(numero);
-            }
-        }
-    } else {
+        alert(`Pares: ${pares.join(", ")}\nÍmpares: ${impares.join(", ")}`)
+    } 
+    else {
         alert(`Erro: O número inicial deve ser menor que o número final.`);
     }
 

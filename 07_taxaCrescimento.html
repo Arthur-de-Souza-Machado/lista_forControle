@@ -14,7 +14,7 @@
     let anos = 0;
     let populacaoAtual = populacaoInicial;
 
-    for (let ano = 1; populacaoAtual < populacaoAlvo; ano++) {
+    for (let ano = 1; populacaoAtual <= populacaoAlvo; ano++) {
         populacaoAtual += populacaoAtual * taxaCrescimentoAnual;
         anos = ano;
     }
